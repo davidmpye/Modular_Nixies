@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name in14-rescue)(type Legacy)(uri ${KIPRJMOD}/in14-rescue.lib)(options "")(descr ""))
+  (lib (name in12-rescue)(type Legacy)(uri ${KIPRJMOD}/in12-rescue.lib)(options "")(descr ""))
+)
