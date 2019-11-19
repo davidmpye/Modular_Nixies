@@ -49,8 +49,6 @@ F 3 "" H 9150 1200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9400 1400 9600 1400
-Text GLabel 9400 1400 0    50   Input ~ 0
-LED_DIN
 Text GLabel 10150 1400 2    50   Input ~ 0
 SHIFT_CLK
 Text GLabel 10150 1200 2    50   Input ~ 0
@@ -468,7 +466,7 @@ Text GLabel 10350 5250 2    50   Input ~ 0
 SHIFT_CLK
 Wire Wire Line
 	2350 1450 2550 1450
-Text GLabel 2550 1450 2    50   Input ~ 0
+Text GLabel 2550 1250 2    50   Input ~ 0
 NEOPIX_3V3
 Wire Wire Line
 	2350 1750 2550 1750
@@ -502,8 +500,6 @@ Text GLabel 9000 4450 0    50   Input ~ 0
 BLANK
 Text GLabel 9000 5250 0    50   Input ~ 0
 CLK
-Text GLabel 2550 1250 2    50   Input ~ 0
-LATCH
 Text GLabel 2550 1350 2    50   Input ~ 0
 BLANK
 Text GLabel 1150 1450 0    50   Input ~ 0
@@ -569,67 +565,11 @@ Wire Wire Line
 	1350 1750 1150 1750
 Wire Wire Line
 	1350 1850 1150 1850
-Text GLabel 2550 1550 2    50   Input ~ 0
-SW_2
 Text GLabel 2550 1650 2    50   Input ~ 0
 SW_1
 Text GLabel 1150 1750 0    50   Input ~ 0
 SW_3
-$Comp
-L power:+3V3 #PWR0120
-U 1 1 5DA24817
-P 9250 5800
-F 0 "#PWR0120" H 9250 5650 50  0001 C CNN
-F 1 "+3V3" H 9265 5973 50  0000 C CNN
-F 2 "" H 9250 5800 50  0001 C CNN
-F 3 "" H 9250 5800 50  0001 C CNN
-	1    9250 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 5DA24823
-P 9250 5950
-F 0 "R7" H 9320 5996 50  0000 L CNN
-F 1 "10k" H 9320 5905 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9180 5950 50  0001 C CNN
-F 3 "~" H 9250 5950 50  0001 C CNN
-	1    9250 5950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9250 6100 9250 6150
-Wire Wire Line
-	9250 6150 9500 6150
-$Comp
-L Device:R R12
-U 1 1 5DA2482C
-P 10100 5950
-F 0 "R12" H 10170 5996 50  0000 L CNN
-F 1 "10k" H 10170 5905 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10030 5950 50  0001 C CNN
-F 3 "~" H 10100 5950 50  0001 C CNN
-	1    10100 5950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10100 6100 10100 6150
-Wire Wire Line
-	10100 6150 9900 6150
-Wire Wire Line
-	9250 5800 9700 5800
-Wire Wire Line
-	9700 5800 9700 5850
-Connection ~ 9250 5800
-Wire Wire Line
-	10100 6150 10350 6150
-Connection ~ 10100 6150
-Wire Wire Line
-	9250 6150 9000 6150
-Connection ~ 9250 6150
-Text GLabel 10350 6150 2    50   Input ~ 0
-LED_DIN
-Text GLabel 9000 6150 0    50   Input ~ 0
+Text GLabel 9400 1400 0    50   Input ~ 0
 NEOPIX_3V3
 Text GLabel 1150 1850 0    50   Input ~ 0
 HV_DISABLE
@@ -1052,17 +992,6 @@ F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 9700 4350 50  000
 	1    9700 4350
 	0    1    1    0   
 $EndComp
-$Comp
-L Transistor_FET:BSS138 Q6
-U 1 1 5DDA2457
-P 9700 6050
-F 0 "Q6" V 9951 6050 50  0000 C CNN
-F 1 "BSS138" V 10042 6050 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 9900 5975 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 9700 6050 50  0001 L CNN
-	1    9700 6050
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5300 3050 5800 3050
 Wire Wire Line
@@ -1235,15 +1164,8 @@ Wire Wire Line
 	5300 5900 5650 5900
 Text GLabel 5650 5900 2    50   Input ~ 0
 SW_3
-$Comp
-L power:+5V #PWR?
-U 1 1 5DCB14D8
-P 10100 5800
-F 0 "#PWR?" H 10100 5650 50  0001 C CNN
-F 1 "+5V" H 10115 5973 50  0000 C CNN
-F 2 "" H 10100 5800 50  0001 C CNN
-F 3 "" H 10100 5800 50  0001 C CNN
-	1    10100 5800
-	1    0    0    -1  
-$EndComp
+Text GLabel 2550 1450 2    50   Input ~ 0
+LATCH
+Text GLabel 2550 1550 2    50   Input ~ 0
+SW_2
 $EndSCHEMATC
