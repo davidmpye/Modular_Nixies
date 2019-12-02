@@ -466,7 +466,7 @@ Text GLabel 10350 5250 2    50   Input ~ 0
 SHIFT_CLK
 Wire Wire Line
 	2350 1450 2550 1450
-Text GLabel 2550 1250 2    50   Input ~ 0
+Text GLabel 1150 1750 0    50   Input ~ 0
 NEOPIX_3V3
 Wire Wire Line
 	2350 1750 2550 1750
@@ -567,11 +567,11 @@ Wire Wire Line
 	1350 1850 1150 1850
 Text GLabel 2550 1650 2    50   Input ~ 0
 SW_1
-Text GLabel 1150 1750 0    50   Input ~ 0
+Text GLabel 1150 1850 0    50   Input ~ 0
 SW_3
 Text GLabel 9400 1400 0    50   Input ~ 0
 NEOPIX_3V3
-Text GLabel 1150 1850 0    50   Input ~ 0
+Text GLabel 2550 1250 2    50   Input ~ 0
 HV_DISABLE
 $Comp
 L power:+5V #PWR0122
