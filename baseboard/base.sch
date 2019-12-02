@@ -667,50 +667,8 @@ Wire Wire Line
 	2450 4250 2450 5050
 Wire Wire Line
 	2100 4250 2450 4250
-Wire Wire Line
-	2100 4550 2900 4550
-Wire Wire Line
-	2100 4700 3100 4700
 $Comp
-L Device:R R13
-U 1 1 5DC18026
-P 2900 4400
-F 0 "R13" H 2970 4446 50  0000 L CNN
-F 1 "4k7" H 2970 4355 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2830 4400 50  0001 C CNN
-F 3 "~" H 2900 4400 50  0001 C CNN
-	1    2900 4400
-	1    0    0    -1  
-$EndComp
-Connection ~ 2900 4550
-Wire Wire Line
-	2900 4550 3200 4550
-$Comp
-L Device:R R14
-U 1 1 5DC18940
-P 3100 4550
-F 0 "R14" H 3170 4596 50  0000 L CNN
-F 1 "4k7" H 3170 4505 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 3030 4550 50  0001 C CNN
-F 3 "~" H 3100 4550 50  0001 C CNN
-	1    3100 4550
-	1    0    0    -1  
-$EndComp
-Connection ~ 3100 4700
-Wire Wire Line
-	3100 4700 3250 4700
-Wire Wire Line
-	2900 4250 2900 4050
-Wire Wire Line
-	2900 4050 2700 4050
-Connection ~ 2700 4050
-Wire Wire Line
-	2900 4050 3100 4050
-Wire Wire Line
-	3100 4050 3100 4400
-Connection ~ 2900 4050
-$Comp
-L GenericModules:NCH6100HVNixiePSU U3
+L base-rescue:NCH6100HVNixiePSU-GenericModules U3
 U 1 1 5DC2EC46
 P 2850 6350
 F 0 "U3" H 2900 6815 50  0000 C CNN
@@ -721,7 +679,7 @@ F 3 "" H 2850 6350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GenericModules:DS3231RTCModule U2
+L base-rescue:DS3231RTCModule-GenericModules U2
 U 1 1 5DC2F9CB
 P 1600 4400
 F 0 "U2" H 1600 4925 50  0000 C CNN
@@ -732,7 +690,7 @@ F 3 "" H 1600 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GenericModules:LM2596BuckConverterModule U4
+L base-rescue:LM2596BuckConverterModule-GenericModules U4
 U 1 1 5DC32624
 P 1650 3000
 F 0 "U4" H 1700 3465 50  0000 C CNN
@@ -933,19 +891,6 @@ Wire Wire Line
 Connection ~ 2050 6700
 Wire Wire Line
 	2050 6700 2050 6750
-Wire Wire Line
-	1050 7250 1150 7250
-$Comp
-L Transistor_FET:BSS138 Q1
-U 1 1 5DD75B39
-P 1550 6500
-F 0 "Q1" H 1756 6546 50  0000 L CNN
-F 1 "BSS138" H 1756 6455 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1750 6425 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1550 6500 50  0001 L CNN
-	1    1550 6500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1150 6500 1350 6500
 $Comp
@@ -1168,4 +1113,46 @@ Text GLabel 2550 1450 2    50   Input ~ 0
 LATCH
 Text GLabel 2550 1550 2    50   Input ~ 0
 SW_2
+$Comp
+L Device:R R7
+U 1 1 5DE5FC03
+P 1350 6200
+F 0 "R7" H 1420 6246 50  0000 L CNN
+F 1 "10K" H 1420 6155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1280 6200 50  0001 C CNN
+F 3 "~" H 1350 6200 50  0001 C CNN
+	1    1350 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0120
+U 1 1 5DE60E59
+P 1350 5950
+F 0 "#PWR0120" H 1350 5800 50  0001 C CNN
+F 1 "+3V3" H 1365 6123 50  0000 C CNN
+F 2 "" H 1350 5950 50  0001 C CNN
+F 3 "" H 1350 5950 50  0001 C CNN
+	1    1350 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:BSS138 Q1
+U 1 1 5DD75B39
+P 1550 6500
+F 0 "Q1" H 1756 6546 50  0000 L CNN
+F 1 "BSS138" H 1756 6455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1750 6425 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1550 6500 50  0001 L CNN
+	1    1550 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 6050 1350 5950
+Wire Wire Line
+	1350 6350 1350 6500
+Connection ~ 1350 6500
+Wire Wire Line
+	2100 4700 3250 4700
+Wire Wire Line
+	2100 4550 3200 4550
 $EndSCHEMATC
